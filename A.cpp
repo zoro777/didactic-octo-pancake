@@ -18,7 +18,7 @@ typedef long long ll;
 
 const long long linf = 1e18+5;
 const ll mod = 1000000007;
-const int inf = 1e9;
+const int inf = 1000000000;
 
 ll read(){
 	bool minus = false;
