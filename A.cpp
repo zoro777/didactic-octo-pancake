@@ -20,29 +20,6 @@ const long long linf = 1e18+5;
 const ll mod = 1000000007;
 const int inf = 1000000000;
 
-ll read(){
-	bool minus = false;
-	ll result = 0;
-	char ch;
-	ch = getchar();
-	while (true) {
-		if (ch == '-') break;
-		if (ch >= '0' && ch <= '9') break;
-		ch = getchar();
-	}
-	if (ch == '-') minus = true; else result = ch-'0';
-	while (true) {
-		ch = getchar();
-		if (ch < '0' || ch > '9') break;
-		result = result*10 + (ch - '0');
-	}
-	if (minus){
-		return -result;
-	}
-	else{
-		return result;
-	}
-}
 
 ll fpow(ll base,ll power){
 	ll result = 1;
@@ -95,32 +72,9 @@ void solve(){
 
 int main(){
  	int t;
- 	cin >> t;
+ 	scanf("%d",&t);
  	while( t-- ){
  		solve();
  	} 
 	return 0;
-}
-
-
-ll C(ll n, ll r){
-    ll res = 1;
-    vector<bool> isPrime(n+1,1);
-    for (ll i=2; i<=n; i++)
-        if (isPrime[i]){
-            for (ll j=2*i; j<=n; j+=i)
-                isPrime[j]=0;
-            ll k = countFact(n,i) - countFact(r,i) - countFact(n-r,i);  
-            res = (res * fpow(i, k)) % mod;
-        }
-    return res;
-}
-
-ll countFact(ll n, ll p){
-    ll k=0;
-    while (n>0){
-        k+=n/p;
-        n/=p;
-    }
-    return k;
 }
