@@ -4,12 +4,8 @@ using namespace std;
 
 typedef long long ll;
 
-#define eps 1e-9
 #define all(a)   a.begin(),a.end()
 #define mp make_pair
-#define F first
-#define S second
-#define pb push_back
 #define sz size()
 #define rd(inp) scanf("%lld",&inp)
 #define rd2(inp1, inp2) scanf("%lld %lld",&inp1, &inp2)
